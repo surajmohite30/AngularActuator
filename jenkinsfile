@@ -8,10 +8,14 @@ node{
     }
 
     stage('Build'){
-        bat "ng build"
+        bat "ng build --base-href=/highChartsDemo/"
     }
 
     stage('Deploy'){
-        bat "ng serve"
+        bat "copy C:\Users\LENOVO\.jenkins\workspace\jenkins_angular_pipe\dist\highChartsDemo\* D:\tomcat\webapps\highChartsDemo"
+    }
+
+    stage('run'){
+       bat "start chrome http://localhost:8081/highChartsDemo"
     }
 }
