@@ -11,7 +11,4 @@ node{
         bat "ng build"
     }
     
-    stage('Deploy on server'){
-        bat "Xcopy /E /I C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_actuator_pipe/dist D:/tomcat/webapps"
-    }
 }
