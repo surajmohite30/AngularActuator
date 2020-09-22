@@ -13,6 +13,5 @@ node{
 
     stage('Deploy'){
         bat "robocopy C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_pipe/dist D:/tomcat/webapps /E /MOVE"
-        bat "start chrome http://localhost:8081/highChartsDemo"
     }
 }
