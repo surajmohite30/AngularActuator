@@ -12,7 +12,7 @@ node{
     }
 
     stage('Deploy'){
-        bat "xcopy /s /i C:\\Users\LENOVO\.jenkins\workspace\jenkins_angular_pipe\dist\highChartsDemo\ D:\\tomcat\webapps\highchart"
+        bat "xcopy /s /i C:\\Users/LENOVO/.jenkins/workspace/jenkins_angular_pipe/dist/highChartsDemo/ D:\\tomcat/webapps/highchart"
     }
 
     stage('run'){
