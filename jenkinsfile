@@ -1,7 +1,5 @@
 node{
-    stage('Checkout SCM'){
-        git branch: 'master', url: 'https://github.com/surajmohite30/AngularActuator.git'
-    }
+    
 
     stage('Install node module'){
         powershell "npm install"
