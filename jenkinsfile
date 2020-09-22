@@ -11,10 +11,6 @@ node{
         bat "ng build --base-href=/highChartsDemo/"
     }
 
-    stage('Deploy'){
-        bat "copy C:\Users\LENOVO\.jenkins\workspace\jenkins_angular_pipe\dist\highChartsDemo\* D:\tomcat\webapps\highChartsDemo"
-    }
-
     stage('run'){
        bat "start chrome http://localhost:8081/highChartsDemo"
     }
