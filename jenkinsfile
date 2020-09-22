@@ -4,14 +4,18 @@ node{
     }
 
     stage('Install node module'){
-        bat "npm install"
+        powershell "npm install"
     }
 
     stage('Build'){
-        bat "ng build --prod"
+        powershell "ng build"
     }
 
-    stage('Deploy'){
+    stage('Deploy on tomcat server'){
         bat "robocopy C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_pipe/dist D:/tomcat/webapps /E /MOVE"
+    }
+
+    stage('run'){
+       bat "start chrome http://localhost:8081/highChartsDemo"
     }
 }
