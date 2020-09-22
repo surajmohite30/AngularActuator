@@ -8,14 +8,12 @@ node{
     }
 
     stage('Build'){
-        bat "ng build"
+        bat "npm run build:ssr"
     }
 
     stage('Deploy on tomcat server'){
-        bat "robocopy C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_actuator_pipe/dist D:/tomcat/webapps /E /MOVE"
+        bat "pm2 restart all"
     }
 
-    stage('run'){
-       bat "start chrome http://localhost:8081/highChartsDemo"
-    }
+    
 }
