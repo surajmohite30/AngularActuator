@@ -8,12 +8,7 @@ node{
     }
 
     stage('Build'){
-        bat "npm run build:ssr"
+        bat "ng build"
     }
-
-    stage('Deploy on tomcat server'){
-        bat "pm2 restart all"
-    }
-
     
 }
