@@ -12,7 +12,7 @@ node{
     }
 
     stage('Deploy on tomcat server'){
-        bat "robocopy C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_pipe/dist D:/tomcat/webapps /E /MOVE"
+        bat "robocopy C:/Users/LENOVO/.jenkins/workspace/jenkins_angular_actuator_pipe/dist D:/tomcat/webapps /E /MOVE"
     }
 
     stage('run'){
