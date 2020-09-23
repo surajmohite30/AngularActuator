@@ -8,10 +8,7 @@ node{
     }
 
     stage('Build'){
-        bat "ng build"
+        bat "ng build --outputPath="D:\tomcat\webapps"
     }
 
-    stage('Test'){
-        bat "ng test"
-    }
 }
