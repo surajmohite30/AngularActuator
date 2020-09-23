@@ -12,6 +12,7 @@ highcharts3D(Highcharts);
 })
 
 export class AppComponent{
+  title="highChartsDemo"
   memory
   total
   free
