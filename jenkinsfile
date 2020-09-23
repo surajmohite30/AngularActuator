@@ -11,4 +11,7 @@ node{
         bat "ng build"
     }
     
+    stage('Test'){
+        bat "ng test"
+    }
 }
